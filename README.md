@@ -1,2 +1,2 @@
 # Aeropuertos-App
-This web applications is about Airports
+This web application is about Airports
