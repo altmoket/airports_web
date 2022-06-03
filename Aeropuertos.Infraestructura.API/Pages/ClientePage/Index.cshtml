@@ -1,0 +1,34 @@
+﻿@page
+@model Aeropuertos.Infraestructura.API.Pages.ClientePage.IndexModel;
+@addTagHelper *, Microsoft.AspNetCore.Mvc.TagHelpers
+<div class="container">
+    <h2 class="h2">Clientes</h2>
+    <form method="post">
+        <table class="table">
+            <thead class="table-dark">
+                <tr>
+                    <th>Nombre</th>
+                    <th>Tipo</th>
+                    <th>Nacionalidad</th>
+                    <th></th>
+                </tr>
+            </thead>
+            <tbody>
+                @foreach (var cliente in Model.Clientes)
+                {
+                    <tr>
+                        <td>@cliente.nombre</td>
+                        <td>@cliente.tipo</td>
+                        <td>@cliente.nacionalidad</td>
+                        <td>
+                            <a asp-page="../ClientePage/Edit" asp-route-id="@cliente.clienteId" class="btn btn-success">Editar</a>
+                            <button type="submit" asp-page-handler="delete" asp-route-id="@cliente.clienteId" class="btn btn-danger">Eliminar</button>
+                        </td>
+                    </tr>
+                }
+            </tbody>
+        </table>
+        <a asp-page="../ClientePage/Create" class="btn btn-primary">Crear Cliente</a>
+    </form>
+
+</div>

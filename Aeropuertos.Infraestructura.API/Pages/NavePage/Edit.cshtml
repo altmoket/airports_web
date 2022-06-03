@@ -1,0 +1,39 @@
+@page "{id:Guid}"
+@model Aeropuertos.Infraestructura.API.Pages.NavePage.EditModel
+@{
+    ViewData["Title"] = "Edit";
+}
+<div class="container">
+    <div class="row">
+        <div class="col-md-4">
+            <h2 class="h2">Editar Nave</h2>
+            <form method="post">
+                <input type="hidden" asp-for="Nave!.numeroMatricula" />
+                <div class="form-group">
+                    <label class="control-label">Clasificacion</label>
+                    <input asp-for="Nave!.clasificacion" class="form-control" />
+                </div>
+                <br/>
+                <div class="form-group">
+                    <label class="control-label">Capacidad</label>
+                    <input asp-for="Nave!.capacidad" class="form-control" />
+                </div>
+                <br/>
+                <div class="form-group">
+                    <label class="control-label">Numero Tripulantes</label>
+                    <input asp-for="Nave!.numeroTripulantes" class="form-control" />
+                </div>
+                <br/>
+                <div class="form-group">
+                    <label class="control-label">Total Plazas</label>
+                    <input asp-for="Nave!.totalPlazasParaPasajeros" class="form-control" />
+                </div>
+                <br/>
+                <div class="form-group">
+                    <input type="submit" value="Enviar" class="btn btn-success" />
+                    <a asp-page="../NavePage/Index" class="btn btn-danger">Cancelar</a>
+                </div>
+            </form>
+        </div>
+    </div>
+</div>

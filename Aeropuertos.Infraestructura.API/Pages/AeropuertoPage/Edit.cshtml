@@ -1,0 +1,34 @@
+@page "{id:Guid}"
+@model Aeropuertos.Infraestructura.API.Pages.AeropuertoPage.EditModel
+@{
+    ViewData["Title"] = "Edit";
+}
+<div class="container">
+    <div class="row">
+        <div class="col-md-4">
+            <h2 class="h2">Editar Aeropuerto</h2>
+            <form method="post">
+                <input type="hidden" asp-for="Aeropuerto!.aeropuertoId" />
+                <div class="form-group">
+                    <label class="control-label">Nombre</label>
+                    <input asp-for="Aeropuerto!.nombre" class="form-control" />
+                </div>
+                <br/>
+                <div class="form-group">
+                    <label class="control-label">Direccion</label>
+                    <input asp-for="Aeropuerto!.direccion" class="form-control" />
+                </div>
+                <br/>
+                <div class="form-group">
+                    <label class="control-label">Posicion Geografica</label>
+                    <input asp-for="Aeropuerto!.posicionGeografica" class="form-control" />
+                </div>
+                <br/>
+                <div class="form-group">
+                    <input type="submit" value="Enviar" class="btn btn-success" />
+                    <a asp-page="../AeropuertoPage/Index" class="btn btn-danger">Cancelar</a>
+                </div>
+            </form>
+        </div>
+    </div>
+</div>

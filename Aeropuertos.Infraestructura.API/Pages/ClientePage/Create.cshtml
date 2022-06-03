@@ -1,0 +1,30 @@
+@page
+@model Aeropuertos.Infraestructura.API.Pages.ClientePage.CreateModel
+@addTagHelper *, Microsoft.AspNetCore.Mvc.TagHelpers
+<div class="container">
+   <div class="row">
+      <div class="col-md-4">
+         <h2 class="h2">Crear nuevo cliente</h2>
+         <form method="post">
+            <div class="form-group">
+               <label class="control-label">Nombre</label>
+               <input asp-for="Cliente!.nombre" class="form-control"/>
+            </div>
+            <br/>
+            <div class="form-group">
+               <label class="control-label">Tipo</label>
+               <input asp-for="Cliente!.tipo" class="form-control"/>
+            </div>
+            <br/>
+            <div class="form-group">
+               <label class="control-label">Nacionalidad</label>
+               <input asp-for="Cliente!.nacionalidad" class="form-control"/>
+            </div>
+            <br/>
+            <div class="form-group">
+               <input type="submit" value="Enviar" class="btn btn-success"/>
+            </div>
+         </form>
+      </div>
+   </div>
+</div>

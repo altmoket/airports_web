@@ -1,0 +1,30 @@
+﻿<!DOCTYPE html>
+<html>
+<head>
+    <title>Aeropuertos</title>
+    <link rel="stylesheet" href="~/lib/bootstrap/dist/css/bootstrap.css" />
+</head>
+<body>
+    <div class="container">
+        <header class="d-flex flex-wrap justify-content-center py-3 mb-4 border-bottom">
+        <a asp-page="/Index" class="d-flex align-items-center mb-3 mb-md-0 me-md-auto text-dark text-decoration-none">
+            <span class="fs-4">Aeropuertos App</span>
+        </a>
+
+        <ul class="nav nav-pills">
+            <li class="nav-item"><a asp-page="/Index" class="nav-link">Home</a></li>
+            <li class="nav-item"><a asp-page="/NavePage/Index" class="nav-link">Naves</a></li>
+            <li class="nav-item"><a asp-page="/AeropuertoPage/Index" class="nav-link">Aeropuertos</a></li>
+            <li class="nav-item"><a asp-page="/ClientePage/Index" class="nav-link">Clientes</a></li>
+        </ul>
+        </header>
+  </div>
+    <br />
+    <div class="container">
+      @RenderBody()
+    </div>
+    <script src="~/lib/jquery/dist/jquery.js"></script>
+    <script src="~/lib/jquery-validation/dist/jquery.validate.js"></script>
+    <script src="~/lib/jquery-validation-unobtrusive/jquery.validate.unobtrusive.js"></script>
+</body>
+</html>
