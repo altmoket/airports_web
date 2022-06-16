@@ -3,6 +3,7 @@ using Aeropuertos.Infraestructura.Datos.Contextos;
 
 var builder = WebApplication.CreateBuilder(args);
 builder.Services.AddDbContext<BaseContexto>(opt=>opt.UseInMemoryDatabase("App"));
+//builder.Services.AddDbContext<BaseContexto>(opt=>opt.UseSqlServer(builder.Configuration.GetConnectionString("AeropuertoContext")));
 
 // Add services to the container.
 builder.Services.AddRazorPages();
